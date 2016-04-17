@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BoolParameterControl.ascx" />
+    <Content Include="Input.xml" />
     <Content Include="Style.css" />
     <Content Include="UserControl.ascx" />
     <Content Include="packages.config" />

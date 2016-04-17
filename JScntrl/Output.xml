@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ArrayOfParameter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Parameter>
+    <Id>a</Id>
+    <Name>a</Name>
+    <Type>g</Type>
+    <Value>lol</Value>
+  </Parameter>
+  <Parameter>
+    <Id>a</Id>
+    <Name>a</Name>
+    <Type>g</Type>
+    <Value>lol</Value>
+  </Parameter>
+  <Parameter>
+    <Id>a</Id>
+    <Name>a</Name>
+    <Type>g</Type>
+    <Value>lol</Value>
+  </Parameter>
+</ArrayOfParameter>

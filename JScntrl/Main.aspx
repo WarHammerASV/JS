@@ -8,14 +8,16 @@
     <link href="Style.css" rel="StyleSheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        #SaveButton {
+            height: 26px;
+            width: 107px;
+        }
+    </style>
 </head>
-<body>
+<body>   
     <form id="form1" runat="server">
-
     </form>
     <br />
-    <button id="SaveButton" runat="server" onclick="SaveClick">
-        Save
-    </button>
 </body>
 </html>
