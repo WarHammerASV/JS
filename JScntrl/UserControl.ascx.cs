@@ -9,6 +9,10 @@ namespace JScntrl
 {
     public partial class CommonParameterControl : System.Web.DynamicData.FieldTemplateUserControl
     {
+
+
+        private TextBox editFieldText;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

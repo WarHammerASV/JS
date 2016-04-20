@@ -7,16 +7,15 @@
 <head runat="server">
     <link href="Style.css" rel="StyleSheet" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-    <style type="text/css">
-        #SaveButton {
-            height: 26px;
-            width: 107px;
-        }
+    <title>
+
+    </title>
+    
     </style>
 </head>
 <body>   
-    <form id="form1" runat="server">
+    <form id="form1" runat="server">      
+        <br />
     </form>
     <br />
 </body>

@@ -11,16 +11,27 @@ namespace JScntrl
 {
     public partial class Main : System.Web.UI.Page
     {
+        static public List<Parameter> outputList = new List<Parameter>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            XMLSerializer ser = new XMLSerializer();
-            List<Parameter> parametersList = ser.DeserializeXml("W:/C#/JScntrl/JScntrl/Input.xml");
-            foreach (var parameter in parametersList)
+           
+            if (!IsPostBack)
             {
-                if (parameter.Type == "System.Boolean")
-                    AddBoleanParameter(parameter);
-                else
-                    AddStringOrIntParameter(parameter);
+                XMLSerializer ser = new XMLSerializer();
+                List<Parameter> parametersList = ser.DeserializeXml("W:/C#/JScntrl/JScntrl/Input.xml");
+                foreach (var parameter in parametersList)
+                {
+                    if (parameter.Type == "System.Boolean")
+                    {
+                        outputList.Add(parameter);
+                        AddBoleanParameter(parameter);
+                    }
+                    else
+                    {
+                        outputList.Add(parameter);
+                        AddStringOrIntParameter(parameter);
+                    }
+                }
             }
 
             Button save = new Button();
@@ -28,7 +39,6 @@ namespace JScntrl
             save.ID = "saveButton";
             save.Click += SaveClick;
             form1.Controls.Add(save);
-
         }
 
         private void AddBoleanParameter(Parameter parameter)
@@ -50,26 +60,14 @@ namespace JScntrl
             return value == "True" ? true : false;
         }
 
-        public void SaveClick(object sender, EventArgs e)
+        private void SaveClick(object sender, EventArgs e)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Parameter>));
-            Parameter par = new Parameter();
-            List<Parameter> outputList = new List<Parameter>();
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Parameter>), new XmlRootAttribute("Parameters"));
+            Parameter par = new Parameter();           
             using (FileStream fs = new FileStream("W:/C#/JScntrl/JScntrl/Output.xml", FileMode.OpenOrCreate))
             {
-                //foreach (var control in form1.Controls)
-                //{            
-                    //par.Id = "a";
-                    //par.Name = "a";
-                    //par.Type = "g";
-                    //par.Value = "lol";
-                    //outputList.Add(par);               
-                //}
-                
-                    serializer.Serialize(fs,outputList);
-
+                serializer.Serialize(fs,outputList);
             }
-
         }
     }
 }

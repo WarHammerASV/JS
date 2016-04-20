@@ -1,2 +1,7 @@
-﻿body {background: #00ffff
+﻿body {background: #b6ff00
+}
+div {
+    height: auto;
+    width: 300px;
+    background:#5fb400;
 }

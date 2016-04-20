@@ -11,9 +11,11 @@
         <asp:Label ID="Name" runat="server"></asp:Label><br />
 
         <asp:Label text="Description= " runat="server"></asp:Label>
-        <asp:Label ID="Description" runat="server"></asp:Label><br /><br />
+        <asp:Label ID="Description" runat="server"></asp:Label><br />
 
         <asp:Label text="Value= " runat="server"></asp:Label>
-        <asp:TextBox ID="Value" runat="server"></asp:TextBox>
+        <asp:TextBox ID="Value" runat="server" TextChanged="textChangedEventHandler"></asp:TextBox>
+        <br />
     </fieldset>
 </div>
+<br />
