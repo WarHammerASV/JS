@@ -49,12 +49,12 @@ namespace JScntrl {
         protected global::System.Web.UI.WebControls.Label Description;
         
         /// <summary>
-        /// Value элемент управления.
+        /// typeValue элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Value;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl typeValue;
     }
 }

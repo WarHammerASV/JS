@@ -94,8 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BoolParameterControl.ascx" />
     <Content Include="Input.xml" />
+    <Content Include="scripts\Validation.js" />
     <Content Include="Style.css" />
     <Content Include="UserControl.ascx" />
     <Content Include="packages.config" />
@@ -116,13 +116,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BoolParameterControl.ascx.cs">
-      <DependentUpon>BoolParameterControl.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BoolParameterControl.ascx.designer.cs">
-      <DependentUpon>BoolParameterControl.ascx</DependentUpon>
-    </Compile>
     <Compile Include="UserControl.ascx.cs">
       <DependentUpon>UserControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,6 +132,7 @@
     </Compile>
     <Compile Include="Parameter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation.cs" />
     <Compile Include="XMLSerializer.cs" />
   </ItemGroup>
   <PropertyGroup>

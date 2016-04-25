@@ -11,28 +11,21 @@ namespace JScntrl
 {
     public partial class Main : System.Web.UI.Page
     {
+        static public bool serializeFlag = true;
         static public List<Parameter> outputList = new List<Parameter>();
+        static public List<Parameter> parameterList = new List<Parameter>();
+
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-           
-            if (!IsPostBack)
-            {
                 XMLSerializer ser = new XMLSerializer();
-                List<Parameter> parametersList = ser.DeserializeXml("W:/C#/JScntrl/JScntrl/Input.xml");
-                foreach (var parameter in parametersList)
+                parameterList = ser.DeserializeXml(@"W:/C#/JScntrl/JScntrl/Input.xml");
+                foreach (var parameter in parameterList)
                 {
-                    if (parameter.Type == "System.Boolean")
-                    {
-                        outputList.Add(parameter);
-                        AddBoleanParameter(parameter);
-                    }
-                    else
-                    {
-                        outputList.Add(parameter);
-                        AddStringOrIntParameter(parameter);
-                    }
+                    outputList.Add(parameter);
+                    AddUserParameter(parameter);
                 }
-            }
 
             Button save = new Button();
             save.Text = "Сохранить";
@@ -41,33 +34,27 @@ namespace JScntrl
             form1.Controls.Add(save);
         }
 
-        private void AddBoleanParameter(Parameter parameter)
-        {
-            var boolParameter = (BoolParameterControl)LoadControl("BoolParameterControl.ascx");
-            boolParameter.InitializeFields(parameter.Id, parameter.Name, parameter.Description, parameter.Type, IsValueContainTrue(parameter.Value));
-            form1.Controls.Add(boolParameter);
-        }
 
-        private void AddStringOrIntParameter(Parameter parameter)
+        private void AddUserParameter(Parameter parameter)
         {
             var parameterControl = (CommonParameterControl)LoadControl("UserControl.ascx");
             parameterControl.InitializeFields(parameter.Id, parameter.Name, parameter.Description, parameter.Type, parameter.Value);
             form1.Controls.Add(parameterControl);
         }
 
-        private static bool IsValueContainTrue(string value)
-        {
-            return value == "True" ? true : false;
-        }
-
         private void SaveClick(object sender, EventArgs e)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Parameter>), new XmlRootAttribute("Parameters"));
-            Parameter par = new Parameter();           
-            using (FileStream fs = new FileStream("W:/C#/JScntrl/JScntrl/Output.xml", FileMode.OpenOrCreate))
+
+            if (serializeFlag)
             {
-                serializer.Serialize(fs,outputList);
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Parameter>), new XmlRootAttribute("Parameters"));
+                Parameter par = new Parameter();
+                using (FileStream fs = new FileStream(@"W:/C#/JScntrl/JScntrl/Output.xml", FileMode.OpenOrCreate))
+                {
+                    serializer.Serialize(fs, outputList);
+                }
             }
         }
+
     }
 }

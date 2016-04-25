@@ -26,7 +26,7 @@
     <Name>Nuisance call abandonment rate</Name>
     <Description>This is blah-blah-blah </Description>
     <Type>System.Int32</Type>
-    <Value>44444</Value>
+    <Value>44</Value>
   </Parameter>
   <Parameter>
     <Id>AbandonmentRate</Id>

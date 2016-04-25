@@ -1,7 +1,9 @@
-﻿body {background: #b6ff00
+﻿body {
+    background: #ddff00
 }
-div {
+fieldset {
     height: auto;
-    width: 300px;
+    width: 350px;
     background:#5fb400;
+    margin-left: 500px;
 }
