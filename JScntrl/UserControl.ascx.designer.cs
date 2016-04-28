@@ -49,6 +49,7 @@ namespace JScntrl {
         protected global::System.Web.UI.WebControls.Label Description;
         
         /// <summary>
+<<<<<<< HEAD
         /// errorLabel элемент управления.
         /// </summary>
         /// <remarks>
@@ -58,6 +59,8 @@ namespace JScntrl {
         protected global::System.Web.UI.WebControls.Label errorLabel;
         
         /// <summary>
+=======
+>>>>>>> c3dc9c64e55dee62bb85ed534b644f2c922dc502
         /// typeValue элемент управления.
         /// </summary>
         /// <remarks>

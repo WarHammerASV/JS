@@ -9,7 +9,10 @@ namespace JScntrl
 {
     public partial class CommonParameterControl : System.Web.DynamicData.FieldTemplateUserControl
     {
+<<<<<<< HEAD
         static int count = -1;
+=======
+>>>>>>> c3dc9c64e55dee62bb85ed534b644f2c922dc502
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -27,8 +30,11 @@ namespace JScntrl
 
                 typeValue.Controls.Add(boolBox);
                 boolBox.Checked = Convert.ToBoolean(value);
+<<<<<<< HEAD
                 if (value == "True")
                     count++;
+=======
+>>>>>>> c3dc9c64e55dee62bb85ed534b644f2c922dc502
                 boolBox.AutoPostBack = true;
                 boolBox.CheckedChanged += UpdateBox;
             }
@@ -57,6 +63,7 @@ namespace JScntrl
             if (sender is CheckBox)
             {
                 var field = (CheckBox)sender;
+<<<<<<< HEAD
                 if (field.Checked)
                     count++;
                 if (field.Checked == false)
@@ -71,5 +78,17 @@ namespace JScntrl
             count--;
         }
 
+=======
+                var count = 0;
+                if (field.Checked) count++;
+                
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }    
+        }
+    
+>>>>>>> c3dc9c64e55dee62bb85ed534b644f2c922dc502
     }
 }

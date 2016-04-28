@@ -132,6 +132,10 @@
     </Compile>
     <Compile Include="Parameter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Validation.cs" />
+>>>>>>> c3dc9c64e55dee62bb85ed534b644f2c922dc502
     <Compile Include="XMLSerializer.cs" />
   </ItemGroup>
   <PropertyGroup>

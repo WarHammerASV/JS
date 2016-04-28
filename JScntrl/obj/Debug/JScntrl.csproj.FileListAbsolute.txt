@@ -31,6 +31,7 @@ W:\C#\JScntrl\JScntrl\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 W:\C#\JScntrl\JScntrl\obj\Debug\JScntrl.csprojResolveAssemblyReference.cache
 W:\C#\JScntrl\JScntrl\obj\Debug\JScntrl.dll
 W:\C#\JScntrl\JScntrl\obj\Debug\JScntrl.pdb
+<<<<<<< HEAD
 W:\Temp\JS-master\JScntrl\bin\ApplicationInsights.config
 W:\Temp\JS-master\JScntrl\bin\roslyn\csc.exe
 W:\Temp\JS-master\JScntrl\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -64,3 +65,5 @@ W:\Temp\JS-master\JScntrl\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform
 W:\Temp\JS-master\JScntrl\obj\Debug\JScntrl.csprojResolveAssemblyReference.cache
 W:\Temp\JS-master\JScntrl\obj\Debug\JScntrl.dll
 W:\Temp\JS-master\JScntrl\obj\Debug\JScntrl.pdb
+=======
+>>>>>>> c3dc9c64e55dee62bb85ed534b644f2c922dc502
